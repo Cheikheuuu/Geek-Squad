@@ -1,0 +1,548 @@
+/* Styles généraux (reprise de vos précédents CSS pour cohérence) */
+body {
+font-family: 'Times New Roman', Times, serif;
+
+margin: 0;
+padding: 0;
+
+background-color: #FFFFFF; /* Fond blanc */
+color: #000000; /* Texte noir */
+}
+
+header {
+background: #D0944B; /* Marron clair pour l'en-tête */
+color: #FFFFFF; /* Texte blanc sur l'en-tête */
+padding: 1rem 0;
+text-align: center;
+}
+
+header h1 {
+margin: 0;
+}
+
+nav ul {
+padding: 0;
+list-style: none;
+}
+
+nav ul li {
+display: inline;
+margin: 0 15px;
+}
+
+nav ul li a {
+color: #FFFFFF; /* Liens de navigation en blanc */
+text-decoration: none;
+font-weight: bold;
+}
+
+nav ul li a:hover {
+text-decoration: underline;
+}
+
+main {
+padding: 20px;
+max-width: 1100px;
+margin: auto;
+}
+
+/* Section Héro du panier */
+.cart-hero {
+text-align: center;
+padding: 40px 20px;
+background-color: #f0f0f0; /* Un très léger dégradé de blanc */
+border-bottom: 1px solid #eee;
+margin-bottom: 30px;
+}
+
+.cart-hero h1 {
+color: #D0944B; /* Titre principal en marron clair */
+font-size: 2.8em;
+margin-bottom: 15px;
+}
+
+.cart-hero p {
+font-size: 1.1em;
+max-width: 700px;
+margin: 0 auto;
+}
+
+/* Conteneur principal du contenu du panier (articles + résumé) */
+.cart-content {
+display: flex;
+flex-wrap: wrap;
+gap: 30px; /* Espace entre les deux colonnes */
+justify-content: center;
+align-items: flex-start; /* Alignement en haut */
+}
+
+/* Colonne des articles du panier */
+.cart-items-container {
+flex: 2; /* Prend plus d'espace */
+min-width: 450px; /* Largeur minimale pour les articles */
+background-color: #FFFFFF;
+padding: 30px;
+border-radius: 8px;
+box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.cart-items-container h2 {
+color: #D0944B;
+font-size: 2em;
+margin-top: 0;
+margin-bottom: 30px;
+text-align: center;
+}
+
+/* Style d'une mini-carte produit dans le panier */
+.cart-item {
+display: flex;
+align-items: center;
+gap: 20px; /* Espace entre l'image et les détails */
+padding: 15px 0;
+border-bottom: 1px solid #eee; /* Séparateur léger */
+margin-bottom: 15px;
+}
+
+.cart-item:last-of-type { /* Correction : Utiliser last-of-type pour le dernier élément dans la liste */
+border-bottom: none;
+margin-bottom: 0;
+}
+
+.cart-item img {
+width: 100px;
+height: 100px;
+object-fit: cover; /* Assure que l'image couvre bien l'espace */
+border-radius: 5px;
+border: 1px solid #ddd;
+}
+
+.item-details {
+flex-grow: 1; /* Prend l'espace restant pour les détails */
+}
+
+.item-details h3 {
+margin: 0 0 5px 0;
+font-size: 1.3em;
+color: #333;
+}
+
+.item-details .item-price {
+margin: 0;
+font-size: 1.1em;
+color: #555;
+font-weight: bold;
+}
+
+.quantite {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin: 0.5rem 0;
+}
+
+.quantite button {
+  padding: 0.3rem 0.8rem;
+  border: none;
+  background: #8B4513;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;  
+  transition: color 0.2s ease;
+
+}
+
+
+
+
+
+.remove-item-btn {
+background: none;
+border: none;
+color: #dc3545; /* Rouge pour le bouton supprimer */
+cursor: pointer;
+font-size: 0.9em;
+margin-left: 20px;
+text-decoration: none;
+transition: color 0.2s ease;
+}
+
+.remove-item-btn:hover {
+color: #c82333;
+}
+
+/* Message panier vide (masqué par défaut si vous avez des produits dans le HTML) */
+.cart-empty-message {
+text-align: center;
+padding: 50px 20px;
+font-size: 1.2em;
+color: #666;
+border: 1px dashed #D0944B; /* Bordure en pointillé marron clair */
+border-radius: 8px;
+margin-top: 30px;
+/* Pour le cacher si des produits sont affichés, ajoutez ceci : display: none; */
+/* Si vous voulez le montrer, retirez les produits du HTML et assurez-vous qu'il est visible */
+}
+
+.cart-empty-message a {
+color: #D0944B;
+text-decoration: none;
+font-weight: bold;
+}
+
+.cart-empty-message a:hover {
+text-decoration: underline;
+}
+
+/* Colonne du résumé de la commande */
+.cart-summary {
+flex: 1; /* Prend l'espace restant */
+min-width: 300px; /* Largeur minimale pour le résumé */
+background-color: #FFFFFF;
+padding: 30px;
+border-radius: 8px;
+box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+position: sticky; /* Reste visible en haut lors du défilement */
+top: 20px; /* Distance du haut de la fenêtre */
+}
+
+.cart-summary h2 {
+color: #D0944B;
+font-size: 2em;
+margin-top: 0;
+margin-bottom: 25px;
+text-align: center;
+}
+
+.summary-line {
+display: flex;
+justify-content: space-between;
+padding: 10px 0;
+border-bottom: 1px dashed #eee; /* Ligne pointillée */
+font-size: 1.1em;
+}
+
+.summary-line:last-of-type {
+border-bottom: none;
+}
+
+.total-line {
+font-weight: bold;
+font-size: 1.3em;
+color: #D0944B; /* Le total en marron clair */
+border-top: 2px solid #D0944B; /* Ligne solide au-dessus du total */
+padding-top: 15px;
+margin-top: 15px;
+}
+
+.total-line .total-price {
+font-size: 1.4em;
+color: #D0944B;
+}
+
+/* Styles pour les moyens de paiement */
+.payment-methods {
+margin-top: 30px;
+padding-top: 20px;
+border-top: 1px dashed #eee;
+text-align: center;
+}
+
+.payment-methods h3 {
+color: #333;
+font-size: 1.2em;
+margin-bottom: 20px;
+}
+
+.payment-logos {
+display: flex;
+flex-wrap: wrap; /* Permet aux logos de passer à la ligne */
+justify-content: center;
+gap: 15px; /* Espace entre les logos */
+margin-bottom: 20px;
+}
+
+.payment-logo {
+width: 90px; /* Largeur fixe pour les "logos" */
+height: 50px;
+line-height: 50px; /* Centre le texte verticalement */
+background-color: #F0F0F0; /* Fond gris clair pour les logos */
+border: 1px solid #D0944B; /* Bordure marron clair */
+border-radius: 5px;
+font-weight: bold;
+font-size: 0.85em;
+color: #333;
+text-align: center;
+box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+transition: all 0.2s ease-in-out;
+}
+
+/* Couleurs spécifiques pour simuler les logos (optionnel) */
+.payment-logo.orange-money {
+background-color: #FF7900; /* Orange Money */
+color: white;
+border-color: #FF7900;
+}
+.payment-logo.wave {
+background-color: #2E8B57; /* Vert pour Wave */
+color: white;
+border-color: #2E8B57;
+}
+.payment-logo.free-money {
+background-color: #00A6DA; /* Bleu pour Free Money */
+color: white;
+border-color: #00A6DA;
+}
+.payment-logo.visa, .payment-logo.mastercard {
+background-color: #1A1A1A; /* Fond sombre pour les cartes classiques */
+color: white;
+border-color: #1A1A1A;
+}
+
+
+.payment-info {
+font-size: 0.9em;
+color: #666;
+margin-bottom: 25px;
+
+}
+
+
+.checkout-note {
+font-size: 0.9em;
+color: #666;
+text-align: center;
+margin-top: 20px;
+border-top: 1px dashed #ddd;
+padding-top: 15px;
+}
+
+
+.checkout-btn {
+display: block;
+width: 100%;
+padding: 15px;
+background-color: #D0944B; /* Bouton "Caisse" en marron clair */
+color: #FFFFFF;
+border: none;
+border-radius: 5px;
+font-size: 1.2em;
+font-weight: bold;
+cursor: pointer;
+margin-top: 30px;
+transition: background-color 0.3s ease;
+}
+
+.checkout-btn:hover {
+background-color: #A0703B; /* Marron plus foncé au survol */
+}
+
+/* Footer (à adapter à votre design global) */
+footer {
+text-align: center;
+padding: 20px;
+background: #333333; /* Un gris foncé ou noir pour le footer */
+color: #FFFFFF;
+margin-top: 50px;
+}
+
+
+.cart-content {
+    display: flex; /* Ou block si tu préfères */
+    flex-direction: column; /* Force l'empilement */
+    max-width: 700px; /* Largeur confortable pour une colonne unique */
+    margin: 0 auto; /* Centre le conteneur */
+    gap: 40px; /* Grand espace entre sections */
+}
+
+.cart-item {
+    /* Garde le display: flex pour l'intérieur du produit */
+    background-color: #FFFFFF;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    border-left: 5px solid #D0944B; /* Une touche de couleur sur le côté */
+}
+
+
+
+
+    .topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2vw 4vw;
+  font-size: 1.1rem;
+  font-weight: bold;
+  pointer-events: auto;
+  background-color: #D0944B;
+   
+}
+.topbar .left,
+.topbar .center,
+.topbar .right {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+.topbar .left {
+  justify-content: flex-start;
+}
+
+.topbar .center {
+  justify-content: center;
+}
+
+.topbar .right {
+  justify-content: flex-end;
+  
+}
+
+.menu a,
+.topbar .right a {
+    
+  margin: 0 1vw;
+  text-decoration: none;
+  color: black;
+}
+
+
+.logo {
+    padding-top: 3%;
+    margin-left: 10% ;
+    margin-top: -7%;
+  font-weight: bold;
+}
+
+.menu a {
+  margin-left: 2vw;
+  text-decoration: none;
+  color: black;
+}
+a {
+  color: black;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #8B4513; /* Marron foncé */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* --- */
+/* Section Informations de Livraison */
+/* --- */
+
+.delivery-info {
+    max-width: 1100px;
+    margin: 50px auto; /* Marge au-dessus et en-dessous */
+    padding: 20px;
+    background-color: #FFFFFF;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.delivery-info h2 {
+    color: #D0944B; /* Titre en marron clair */
+    font-size: 2.2em;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.delivery-details-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* 3 colonnes flexibles */
+    gap: 30px; /* Espace entre les cartes de livraison */
+}
+
+.delivery-card {
+    background-color: #FDFDFD; /* Un léger fond pour les cartes */
+    padding: 25px;
+    border-radius: 10px;
+    border: 1px solid #eee; /* Bordure subtile */
+    box-shadow: 0 2px 4px gray
+}
+
+.delivery-card h3 {
+    color: #D0944B; /* Titre de la carte en marron clair */
+    font-size: 1.5em;
+    margin-top: 0;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #D0944B; /* Ligne sous le titre */
+    padding-bottom: 10px;
+}
+
+.delivery-card p {
+    font-size: 0.95em;
+    line-height: 1.7;
+    margin-bottom: 10px;
+}
+
+.delivery-card ul {
+    list-style: none; /* Supprime les puces */
+    padding: 0;
+    margin-bottom: 15px;
+}
+
+.delivery-card ul li {
+    padding-left: 25px; /* Espace pour une puce personnalisée */
+    position: relative;
+    margin-bottom: 8px;
+    font-size: 0.9em;
+    color: #333;
+}
+
+.delivery-card ul li::before {
+    content: '✓'; /* Puce personnalisée */
+    color: #D0944B; /* Couleur de la puce en marron clair */
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.delivery-card .delivery-note {
+    font-size: 0.85em;
+    color: #666;
+    font-style: italic;
+    margin-top: 20px;
+    border-top: 1px dashed #ddd; /* Ligne pointillée */
+    padding-top: 15px;
+}
+
+.delivery-card a {
+    color: #D0944B; /* Liens en marron clair */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.delivery-card a:hover {
+    text-decoration: underline;
+}
+
+.general-delivery-note {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 1.1em;
+    color: #555;
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #eee;
+}
+
