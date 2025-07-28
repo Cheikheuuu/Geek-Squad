@@ -1,0 +1,299 @@
+/* Styles généraux pour le corps et l'arrière-plan */
+body {
+font-family: 'Times New Roman', Times, serif;
+
+margin: 0;
+padding: 0;
+background-color: #FFFFFF; /* Fond blanc */
+color: #000000; /* Texte noir */
+}
+
+
+header {
+background: #D0944B; /* Marron clair pour l'en-tête */
+color: #FFFFFF; /* Texte blanc sur l'en-tête */
+padding: 1rem 0;
+text-align: center;
+}
+
+header h1 {
+margin: 0;
+}
+
+nav ul {
+padding: 0;
+list-style: none;
+}
+
+nav ul li {
+display: inline;
+margin: 0 15px;
+}
+
+nav ul li a {
+color: #FFFFFF; /* Liens de navigation en blanc */
+text-decoration: none;
+font-weight: bold;
+}
+
+nav ul li a:hover {
+text-decoration: underline;
+}
+
+main {
+padding: 20px;
+max-width: 1100px; /* Augmenté légèrement pour deux colonnes */
+margin: auto;
+}
+
+/* Section Héro de la page contact */
+.contact-hero {
+text-align: center;
+padding: 40px 20px;
+background-color: #f0f0f0; /* Un très léger dégradé de blanc pour la section héro */
+border-bottom: 1px solid #eee;
+margin-bottom: 30px;
+}
+
+.contact-hero h1 {
+color: #D0944B; /* Titre principal en marron clair */
+font-size: 2.8em;
+margin-bottom: 15px;
+}
+
+.contact-hero p {
+font-size: 1.1em;
+max-width: 700px;
+margin: 0 auto;
+}
+
+/* Conteneur principal des deux sections (détails et formulaire) */
+.contact-sections {
+display: flex;
+flex-wrap: wrap; /* Permet aux éléments de passer à la ligne sur petits écrans */
+gap: 40px; /* Espace entre les deux colonnes */
+justify-content: center; /* Centre les colonnes */
+}
+
+/* Styles pour la colonne des coordonnées */
+.contact-details {
+flex: 1; /* Prend l'espace disponible */
+min-width: 300px; /* Largeur minimale pour éviter le rétrécissement excessif */
+background-color: #FFFFFF;
+padding: 30px;
+border-radius: 8px;
+box-shadow: 4px 4px 10px gray;; /* Ombre douce */
+}
+
+.contact-details h2 {
+color: #D0944B; /* Titre des coordonnées en marron clair */
+font-size: 2em;
+margin-top: 0;
+margin-bottom: 25px;
+text-align: center;
+}
+
+.info-item {
+margin-bottom: 20px;
+}
+
+.info-item h3 {
+color: #333333; /* Titres des infos en gris foncé */
+font-size: 1.2em;
+margin-bottom: 5px;
+border-bottom: 1px solid #eee; /* Petite ligne sous les titres d'info */
+padding-bottom: 5px;
+}
+
+.info-item p {
+margin: 0;
+font-size: 1em;
+}
+
+.info-item a {
+color: #D0944B; /* Liens email/téléphone/carte en marron clair */
+text-decoration: none;
+}
+
+.info-item a:hover {
+text-decoration: underline;
+}
+
+.social-links {
+margin-top: 30px;
+text-align: center;
+}
+
+.social-links h3 {
+color: #333333;
+margin-bottom: 15px;
+}
+
+.social-links a {
+display: inline-block;
+background-color: #D0944B; /* Fond des boutons sociaux en marron clair */
+color: #FFFFFF; /* Texte des boutons sociaux en blanc */
+padding: 10px 15px;
+margin: 0 8px;
+border-radius: 5px;
+text-decoration: none;
+font-weight: bold;
+transition: background-color 0.3s ease;
+}
+
+.social-links a:hover {
+background-color: #A0703B; /* Marron légèrement plus foncé au survol */
+}
+
+/* Styles pour le formulaire de partenariat */
+.partnership-form-container {
+flex: 2; /* Prend plus d'espace que la colonne des coordonnées */
+min-width: 350px; /* Largeur minimale pour le formulaire */
+background-color: #FFFFFF;
+padding: 30px;
+border-radius: 8px;
+box-shadow: 4px 4px 10px gray;
+}
+
+.partnership-form-container h2 {
+color: #D0944B; /* Titre du formulaire en marron clair */
+font-size: 2em;
+margin-top: 0;
+margin-bottom: 25px;
+text-align: center;
+}
+
+.partnership-form-container p {
+text-align: center;
+margin-bottom: 30px;
+color: #555555;
+}
+
+.form-group {
+margin-bottom: 20px;
+}
+
+.form-group label {
+display: block;
+margin-bottom: 8px;
+font-weight: bold;
+color: #333333; /* Couleur des labels */
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="tel"],
+.form-group select,
+.form-group textarea {
+width: 100%;
+padding: 12px;
+border: 1px solid #cccccc;
+border-radius: 5px;
+box-sizing: border-box; /* Inclut le padding dans la largeur totale */
+font-size: 1em;
+color: #000000; /* Texte des champs en noir */
+background-color: #FDFDFD; /* Très léger fond pour les champs */
+}
+
+.form-group textarea {
+resize: vertical; /* Permet de redimensionner verticalement */
+}
+
+button[type="submit"] {
+display: block;
+width: 100%;
+padding: 15px;
+background-color: #D0944B; /* Bouton d'envoi en marron clair */
+color: #FFFFFF; /* Texte du bouton en blanc */
+border: none;
+border-radius: 5px;
+font-size: 1.1em;
+font-weight: bold;
+cursor: pointer;
+transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+background-color: #A0703B; /* Marron légèrement plus foncé au survol */
+}
+
+.form-note {
+text-align: center;
+margin-top: 20px;
+font-size: 0.9em;
+color: #666666;
+}
+
+/* Footer (à adapter à votre design global) */
+footer {
+text-align: center;
+padding: 20px;
+background: #333333; /* Un gris foncé ou noir pour le footer */
+color: #FFFFFF;
+margin-top: 50px;
+}
+
+
+
+    .topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2vw 4vw;
+  font-size: 1.1rem;
+  font-weight: bold;
+  pointer-events: auto;
+  background-color: #D0944B;
+   
+}
+.topbar .left,
+.topbar .center,
+.topbar .right {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+.topbar .left {
+  justify-content: flex-start;
+}
+
+.topbar .center {
+  justify-content: center;
+}
+
+.topbar .right {
+  justify-content: flex-end;
+  
+}
+
+.menu a,
+.topbar .right a {
+    
+  margin: 0 1vw;
+  text-decoration: none;
+  color: black;
+}
+
+
+.logo {
+    padding-top: 3%;
+    margin-left: 10% ;
+    margin-top: -7%;
+  font-weight: bold;
+}
+
+.menu a {
+  margin-left: 2vw;
+  text-decoration: none;
+  color: black;
+}
+a {
+  color: black;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #8B4513; /* Marron foncé */
+}
