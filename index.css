@@ -63,7 +63,9 @@ body {
 .topbar .right {
   justify-content: flex-end;
 }
-
+.topbar .right a:hover {
+  color: #8B4513; /* Marron foncé */
+}
 .menu a,
 .topbar .right a {
     

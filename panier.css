@@ -8,7 +8,9 @@ padding: 0;
 background-color: #FFFFFF; /* Fond blanc */
 color: #000000; /* Texte noir */
 }
-
+.topbar .right a:hover {
+  color: #8B4513; /* Marron foncé */
+}
 header {
 background: #D0944B; /* Marron clair pour l'en-tête */
 color: #FFFFFF; /* Texte blanc sur l'en-tête */

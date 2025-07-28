@@ -8,7 +8,9 @@
       background-color: #fff;
       color: #2c1a0c;
     }
-
+.topbar .right a:hover {
+  color: #8B4513; /* Marron foncé */
+}
     .hero {
       background-color: #fff;
       padding: 2rem;

@@ -6,7 +6,9 @@
 .periode.paire .texte {
   order: 2;
 }
-
+.topbar .right a:hover {
+  color: #8B4513; /* Marron foncé */
+}
 .periode.impaire .image {
   order: 2;
  
